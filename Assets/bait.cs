@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
+using Vector2 = UnityEngine.Vector2;
+using Vector3 = UnityEngine.Vector3;
 
 public class FollowAndLaunch : MonoBehaviour
 {
   
     public Transform target;
-    
+   
 
     private Rigidbody2D rb;
-
-  
+    public CircleeMovement rod;
+    
     public float launchForce = 500f;
     
     private bool isFollowing = true;
@@ -36,6 +39,12 @@ public class FollowAndLaunch : MonoBehaviour
         if (isFollowing)
         {
             FollowTarget();
+        }
+
+        if (Vector3.Distance(transform.position,rod.center ) <= 0.1f)
+        {
+            isFollowing = true; 
+            
         }
     }
 

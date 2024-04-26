@@ -10,7 +10,7 @@ public class bait_Script : MonoBehaviour
 
     // Odległość obiektu od punktu (0,0) w momencie przekroczenia linii Y = 0
     private float initialDistanceFromOrigin;
-
+    public CircleeMovement rod;
     // Flaga określająca, czy obiekt przeszedł poniżej linii Y = 0
     private bool isBelowZeroY = false;
     public float movementSpeed = 1f;
@@ -23,13 +23,13 @@ public class bait_Script : MonoBehaviour
     void Update()
     {
         // Sprawdź, czy obiekt znajduje się poniżej linii Y = 0
-        if (transform.position.y < 0)
+        if (transform.position.y < rod.center.y)
         {
             // Jeśli obiekt nie został wcześniej wykryty jako poniżej linii Y = 0
             if (!isBelowZeroY)
             {
                 // Zapisz początkową odległość od punktu (0,0)
-                initialDistanceFromOrigin = Vector2.Distance(transform.position, Vector2.zero);
+                initialDistanceFromOrigin = Vector2.Distance(transform.position, rod.center);
 
                 // Wyłącz `Rigidbody2D`
                 rb.simulated = false;
@@ -37,42 +37,33 @@ public class bait_Script : MonoBehaviour
                 // Ustaw flagę
                 isBelowZeroY = true;
             }
-
-            if (Vector2.Distance(transform.position, Vector2.zero) < initialDistanceFromOrigin+5)
+            if (Vector3.Distance(transform.position, rod.center) <= 0.1f)
+            {
+                  
+                      rb.simulated = true;
+                      isBelowZeroY = false;
+                 
+            
+            }
+            if (Vector2.Distance(transform.position, rod.center) < initialDistanceFromOrigin+5 && isBelowZeroY)
             {
                 // Opadaj obiekt z prędkością 0,1 na sekundę
                 transform.position += Vector3.down * 0.5f * Time.deltaTime;
             }
-            // Ogranicz odległość od punktu (0,0)
-           //LimitDistanceFromOrigin();
+            
         }
       
        
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Space))
         {
-            // Oblicz kierunek ruchu obiektu w kierunku punktu (0,0)
-            Vector2 directionToOrigin = (Vector2.zero - (Vector2)transform.position).normalized;
+       
+            Vector2 directionToOrigin = (rod.center- (Vector2)transform.position).normalized;
             
-            // Porusz obiekt w kierunku punktu (0,0) z ustawioną prędkością
+            
             transform.position += (Vector3)directionToOrigin * movementSpeed * Time.deltaTime;
         }
     }
 
-    // Funkcja do ograniczenia odległości obiektu od punktu (0,0)
-    void LimitDistanceFromOrigin()
-    {
-        // Oblicz odległość od punktu (0,0)
-        float currentDistanceFromOrigin = Vector2.Distance(transform.position, Vector2.zero);
-
-        // Jeśli aktualna odległość jest większa niż początkowa
-        if (currentDistanceFromOrigin > initialDistanceFromOrigin)
-        {
-            // Znajdź kierunek od punktu (0,0) do obiektu
-            Vector2 directionToOrigin = (Vector2.zero - (Vector2)transform.position).normalized;
-
-            // Przesuń obiekt, aby znajdował się na maksymalnej odległości
-            transform.position = (Vector2.zero + directionToOrigin * initialDistanceFromOrigin);
-        }
-    }
+   
 }
 
