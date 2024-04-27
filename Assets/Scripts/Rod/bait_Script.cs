@@ -5,61 +5,60 @@ using UnityEngine;
 public class bait_Script : MonoBehaviour
 {
 
-    // `Rigidbody2D` obiektu
-    private Rigidbody2D rb;
 
-    // Odległość obiektu od punktu (0,0) w momencie przekroczenia linii Y = 0
-    private float initialDistanceFromOrigin;
+    private Rigidbody2D rb;
+    public float initialDistanceFromOrigin;
     public CircleeMovement rod;
-    // Flaga określająca, czy obiekt przeszedł poniżej linii Y = 0
     private bool isBelowZeroY = false;
+
+    private FollowAndLaunch fl;
+    public float drowing;
     public float movementSpeed = 1f;
+    public float lineOffset;
+    public float offsetCoast;
     void Start()
     {
-        // Pobierz `Rigidbody2D` obiektu
+       
         rb = GetComponent<Rigidbody2D>();
+        fl = GetComponent<FollowAndLaunch>();
+
     }
 
     void Update()
     {
-        // Sprawdź, czy obiekt znajduje się poniżej linii Y = 0
-        if (transform.position.y < rod.center.y - 1.0f)
+       
+        if (transform.position.y < rod.center.y - offsetCoast)
         {
-            // Jeśli obiekt nie został wcześniej wykryty jako poniżej linii Y = 0
-            if (!isBelowZeroY)
+           
+            if (!isBelowZeroY && !fl.isFollowing)
             {
-                // Zapisz początkową odległość od punktu (0,0)
                 initialDistanceFromOrigin = Vector2.Distance(transform.position, rod.center);
-
-                // Wyłącz `Rigidbody2D`
                 rb.gravityScale = 0;
-
-                // Ustaw flagę
                 isBelowZeroY = true;
             }
             if (Vector3.Distance(transform.position, rod.center) <= 0.1f)
             {
-                  
-                      rb.simulated = true;
-                      isBelowZeroY = false;
-                 
+                rb.gravityScale = 1f;
+                isBelowZeroY = false;
+            }
             
-            }
-            if (Vector2.Distance(transform.position, rod.center) < initialDistanceFromOrigin+5 && isBelowZeroY)
+            
+            if (Vector2.Distance(transform.position, rod.center) < initialDistanceFromOrigin+lineOffset && isBelowZeroY)
             {
-                // Opadaj obiekt z prędkością 0,1 na sekundę
-                transform.position += Vector3.down * 0.5f * Time.deltaTime;
+                transform.position += Vector3.down * drowing * Time.deltaTime;
             }
+            if (Vector2.Distance(transform.position, rod.center) >= initialDistanceFromOrigin+lineOffset && isBelowZeroY && transform.position.x > rod.center.x+1)
+            {
+                transform.position += Vector3.left * drowing * Time.deltaTime;
+            }
+           
             
         }
       
        
         if (Input.GetKey(KeyCode.Space))
         {
-       
             Vector2 directionToOrigin = (rod.center- (Vector2)transform.position).normalized;
-            
-            
             transform.position += (Vector3)directionToOrigin * movementSpeed * Time.deltaTime;
         }
     }

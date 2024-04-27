@@ -820,6 +820,10 @@ PrefabInstance:
       propertyPath: drowing
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2534046544234793962, guid: c46d436134ef418468624cb3c15ec5df, type: 3}
+      propertyPath: lineOffset
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2717316226769511721, guid: c46d436134ef418468624cb3c15ec5df, type: 3}
       propertyPath: rod
       value: 
