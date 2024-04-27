@@ -27,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 590515400250723449}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.222, y: -0.253, z: 0}
-  m_LocalScale: {x: 0.14, y: 0.114677005, z: 0.2260982}
+  m_LocalPosition: {x: -0.114, y: -0.274, z: 0}
+  m_LocalScale: {x: 0.29534754, y: 0.21748482, z: 0.2260982}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 5341146303925245233}
@@ -76,12 +76,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -8351085460519303713, guid: 92968e5eeb8b1e74894155f05b4f0f59, type: 3}
+  m_Sprite: {fileID: 21300000, guid: da0e088ea213f4d4a96edff86d680efd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4.69, y: 2.93}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -100,12 +100,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootTimings:
-  - 0.3
-  - 0.3
-  - 0.3
-  - 5
-  bulletPrefab: {fileID: 4459011619380766966, guid: 6aaffeef0be630e4e95307e9b15c9d08, type: 3}
-  bulletSpeed: 20
+  - 2
+  - 2
+  bulletPrefab: {fileID: 4459011619380766966, guid: 4eb8c9cd16aff9c459787d4922c21f8c, type: 3}
+  bulletSpeed: 10
   fish: {fileID: 8596811584998198681}
 --- !u!1 &1178198334168362300
 GameObject:
@@ -132,7 +130,7 @@ Transform:
   m_GameObject: {fileID: 1178198334168362300}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.525, y: -0.065, z: 0}
+  m_LocalPosition: {x: -0.362, y: -0.035, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -150,9 +148,9 @@ GameObject:
   - component: {fileID: 7981328555438100111}
   - component: {fileID: 8086991133874713597}
   - component: {fileID: 8596811584998198681}
-  - component: {fileID: -822450377037310078}
+  - component: {fileID: -6930594626629761578}
   m_Layer: 0
-  m_Name: Sum
+  m_Name: Wioslo
   m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -218,7 +216,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1774058815512054900, guid: a9f7de262eb297048a7cb3568ad8c8d1, type: 3}
+  m_Sprite: {fileID: 1447148074055415698, guid: e63fef8c271b0e24aa767a86c0a5dd5f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -263,17 +261,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.0042217374}
+  m_Offset: {x: -0.005624056, y: -0.0042217374}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.39, y: 0.84}
+    oldSize: {x: 2.91, y: 0.82}
     newSize: {x: 1.39, y: 0.84}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.4559467, y: 0.8564613}
+  m_Size: {x: 2.9669557, y: 0.8564613}
   m_EdgeRadius: 0
 --- !u!114 &8596811584998198681
 MonoBehaviour:
@@ -356,16 +354,16 @@ MonoBehaviour:
   attachPoint: {fileID: 1598726804722058158}
   chaseSpeed: 2
   SpawnSettings:
-    MinDistanceX: 0.333
-    MinDistanceY: 0.198
+    MinDistanceX: 0.572
+    MinDistanceY: 0.387
     MaxDistanceX: 1
     MaxDistanceY: 1
-  fishLevel: 1
+  fishLevel: 2
   OnFishCatched:
     m_PersistentCalls:
       m_Calls: []
   currentState: 0
---- !u!114 &-822450377037310078
+--- !u!114 &-6930594626629761578
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -377,4 +375,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21b8a634bbb411492c29342010df5ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FishValue: 13
+  FishValue: 25

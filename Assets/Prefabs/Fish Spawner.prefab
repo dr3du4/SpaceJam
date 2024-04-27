@@ -49,6 +49,9 @@ MonoBehaviour:
   FishPrefabs:
   - {fileID: 1222315476893460742, guid: 459789a6e4405ce41bf5b7868826df61, type: 3}
   - {fileID: 1222315476893460742, guid: 498bafbe34b20554892f76b68505c394, type: 3}
+  - {fileID: 1222315476893460742, guid: bd05040a5158e234eb88586a018ae919, type: 3}
+  - {fileID: 1222315476893460742, guid: 0deff0d00d500a14ebd90c46a4ea8779, type: 3}
+  - {fileID: 1222315476893460742, guid: b686fe7d3f836e5468a31f17b51b3075, type: 3}
   OnFishSpawned:
     m_PersistentCalls:
       m_Calls: []
