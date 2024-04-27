@@ -49,11 +49,18 @@ public class CircleeMovement : MonoBehaviour
         }
     }
 
+    IEnumerator prepareCast()
+    {
+        yield return new WaitForFixedUpdate();
+        yield return new WaitForFixedUpdate();
+        fl.readyToCast = true;
+    }
+
     void FixedUpdate()
     {
         if (fl.isFollowing && !Input.GetButton("Jump"))
         {
-            fl.readyToCast = true;
+            StartCoroutine(prepareCast());
         }
         if (fl.isFollowing == true && Input.GetButton("Jump") && fl.readyToCast == true)
         {
