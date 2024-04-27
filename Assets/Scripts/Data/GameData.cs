@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,6 +12,7 @@ public class GameData : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        StartTime = Time.time;
     }
 
     [Header("Stats")]
