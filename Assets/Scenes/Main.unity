@@ -528,6 +528,74 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1487801618959594335, guid: 1b8e84dcbe5dbf449bbacc4bf81466f9, type: 3}
+      propertyPath: <Quota>k__BackingField
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487801618959594335, guid: 1b8e84dcbe5dbf449bbacc4bf81466f9, type: 3}
+      propertyPath: <TimeLimit>k__BackingField
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487801618959594335, guid: 1b8e84dcbe5dbf449bbacc4bf81466f9, type: 3}
+      propertyPath: OnTimeEnd.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487801618959594335, guid: 1b8e84dcbe5dbf449bbacc4bf81466f9, type: 3}
+      propertyPath: OnTimeEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487801618959594335, guid: 1b8e84dcbe5dbf449bbacc4bf81466f9, type: 3}
+      propertyPath: OnTimeEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487801618959594335, guid: 1b8e84dcbe5dbf449bbacc4bf81466f9, type: 3}
+      propertyPath: OnTimeEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6155147707802199926}
+    - target: {fileID: 1487801618959594335, guid: 1b8e84dcbe5dbf449bbacc4bf81466f9, type: 3}
+      propertyPath: OnTimeEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 7812562526458540157}
+    - target: {fileID: 1487801618959594335, guid: 1b8e84dcbe5dbf449bbacc4bf81466f9, type: 3}
+      propertyPath: OnTimeEnd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487801618959594335, guid: 1b8e84dcbe5dbf449bbacc4bf81466f9, type: 3}
+      propertyPath: OnTimeEnd.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487801618959594335, guid: 1b8e84dcbe5dbf449bbacc4bf81466f9, type: 3}
+      propertyPath: OnTimeEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487801618959594335, guid: 1b8e84dcbe5dbf449bbacc4bf81466f9, type: 3}
+      propertyPath: OnTimeEnd.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: EndGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487801618959594335, guid: 1b8e84dcbe5dbf449bbacc4bf81466f9, type: 3}
+      propertyPath: OnTimeEnd.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487801618959594335, guid: 1b8e84dcbe5dbf449bbacc4bf81466f9, type: 3}
+      propertyPath: OnTimeEnd.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameOver, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487801618959594335, guid: 1b8e84dcbe5dbf449bbacc4bf81466f9, type: 3}
+      propertyPath: OnTimeEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487801618959594335, guid: 1b8e84dcbe5dbf449bbacc4bf81466f9, type: 3}
+      propertyPath: OnTimeEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487801618959594335, guid: 1b8e84dcbe5dbf449bbacc4bf81466f9, type: 3}
+      propertyPath: OnTimeEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487801618959594335, guid: 1b8e84dcbe5dbf449bbacc4bf81466f9, type: 3}
+      propertyPath: OnTimeEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3508001050466836955, guid: 1b8e84dcbe5dbf449bbacc4bf81466f9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
