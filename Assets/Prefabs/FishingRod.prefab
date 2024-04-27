@@ -327,12 +327,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3461822407073126260}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3e3080e31f426146955a5b59710943c, type: 3}
+  m_Script: {fileID: 11500000, guid: 380fbff3bde53a24782f847b02d4a34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 3731347431219686448}
-  rod: {fileID: 0}
-  launchForce: 50
+  rod: {fileID: 2824856096694615484}
+  launchForce: 20
+  isFollowing: 1
   mainCamera: {fileID: 0}
   followingCamera: {fileID: 29987395203022162}
 --- !u!114 &2534046544234793962
@@ -347,8 +348,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68fa80b1fd692024a9eb811540859474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rod: {fileID: 0}
+  initialDistanceFromOrigin: 0
+  rod: {fileID: 2824856096694615484}
+  drowing: 1
   movementSpeed: 5
+  lineOffset: 1
+  offsetCoast: 0
 --- !u!1 &6826210058444851179
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,5 +795,5 @@ MonoBehaviour:
   startAngle: 170
   endAngle: 10
   angularSpeed: 100
-  center: {x: 0, y: 0}
+  center: {x: -6.47, y: -1.28}
   objectToFollow: {fileID: 3731347431219686448}
