@@ -15,7 +15,7 @@ public class CircleeMovement : MonoBehaviour
     private float currentAngle;
     
 
-    public Vector2 center = Vector2.zero;
+    public GameObject center;
     public Transform objectToFollow;
     
   
@@ -59,8 +59,8 @@ public class CircleeMovement : MonoBehaviour
             float y = Mathf.Sin(currentAngle * Mathf.Deg2Rad) * radius;
             
          
-            Vector2 endPosition = new Vector2(x, y) + center;
-            Vector2 direction = endPosition - center;
+            Vector2 endPosition = new Vector2(x, y) + (Vector2)center.transform.position ;
+            Vector2 direction = endPosition - (Vector2)center.transform.position ;
             
             transform.position = endPosition - direction;
             
