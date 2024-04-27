@@ -45,9 +45,14 @@ public class bait_Script : MonoBehaviour
             {
               
                 rb.gravityScale = 0;
-                isBelowZeroY = true;
+                isBelowZeroY = true; 
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Vector2 directionToOrigin = (rod.center.transform.position  - transform.position).normalized;
+            transform.position += (Vector3)directionToOrigin * movementSpeed * Time.deltaTime;
+        }
             }
-            if (Vector3.Distance(transform.position, rod.center.transform.position ) <= 0.1f)
+            if (Vector3.Distance(transform.position, rod.center.transform.position ) <= 0.2f)
             {
                 fl.isFollowing = true;
                 rb.gravityScale = 1f;
@@ -67,12 +72,7 @@ public class bait_Script : MonoBehaviour
             
         
       
-       
-        if (Input.GetKey(KeyCode.Space))
-        {
-            Vector2 directionToOrigin = (rod.center.transform.position  - transform.position).normalized;
-            transform.position += (Vector3)directionToOrigin * movementSpeed * Time.deltaTime;
-        }
+      
     }
 
    

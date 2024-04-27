@@ -12,7 +12,7 @@ public class CircleeMovement : MonoBehaviour
 
 
     public float angularSpeed = 45f;
-    private float currentAngle;
+   public  float currentAngle;
     public FollowAndLaunch fl;
 
     public GameObject center;
@@ -24,7 +24,7 @@ public class CircleeMovement : MonoBehaviour
     void Start()
     {
 
-        currentAngle = startAngle;
+        currentAngle = endAngle;
     }
 
     void Update()
@@ -34,6 +34,7 @@ public class CircleeMovement : MonoBehaviour
         {
             isSpacePressed = true;
         }
+       
         else if (Input.GetKeyUp(KeyCode.Space))
         {
             isSpacePressed = false;
@@ -75,6 +76,10 @@ public class CircleeMovement : MonoBehaviour
 
                 }
             }
+        }
+        else
+        {
+            currentAngle = endAngle;
         }
     }
 }
