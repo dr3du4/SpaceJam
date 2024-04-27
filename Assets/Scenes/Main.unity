@@ -354,7 +354,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1487801618959594335, guid: 1b8e84dcbe5dbf449bbacc4bf81466f9, type: 3}
       propertyPath: <Quota>k__BackingField
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1487801618959594335, guid: 1b8e84dcbe5dbf449bbacc4bf81466f9, type: 3}
       propertyPath: <TimeLimit>k__BackingField

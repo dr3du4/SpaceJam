@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class GameOver : MonoBehaviour
 
     public void TryAgain()
     {
-        // TODO: RESTART SCENE
+        SceneManager.LoadScene("Main");
+        Time.timeScale = 1;
     }
 
     public void ExitGame()
