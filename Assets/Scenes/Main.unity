@@ -728,10 +728,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1737980406558697354, guid: c46d436134ef418468624cb3c15ec5df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 5532317118379061665, guid: c46d436134ef418468624cb3c15ec5df, type: 3}
       propertyPath: mainCamera
       value: 
@@ -779,10 +775,6 @@ PrefabInstance:
     - target: {fileID: 7430030881126723639, guid: c46d436134ef418468624cb3c15ec5df, type: 3}
       propertyPath: m_Name
       value: FishingRod
-      objectReference: {fileID: 0}
-    - target: {fileID: 8935145817768011814, guid: c46d436134ef418468624cb3c15ec5df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
