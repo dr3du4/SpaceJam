@@ -8,9 +8,22 @@ public class Kneeling : MonoBehaviour
 {
     public GameObject shield;
     public GameObject rod;
-    public bool canSpin=true;
     public GameObject followCamera;
     public GameObject shieldCamera;
+
+    public bool canSpin
+    {
+        get => spinDisableCount == 0;
+        set
+        {
+            if (!value)
+                spinDisableCount++;
+            else
+                spinDisableCount--;
+        }
+    }
+
+    private int spinDisableCount = 0;
     
     private void Start()
     {
