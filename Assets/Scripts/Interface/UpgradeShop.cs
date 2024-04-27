@@ -21,7 +21,7 @@ public class UpgradeShop : MonoBehaviour
     }
 
     GameData.Instance.Money -= 5;
-    fl.launchForce += 10;
+    fl.launchForce += 25;
     GameData.Instance.OnGameDataChanged.Invoke();
     button1.interactable = false;
 

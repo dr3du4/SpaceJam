@@ -10,12 +10,19 @@ public class FishSell : MonoBehaviour
     private GameObject hand;
     public int FishValue;
     private FishBase fb;
+    private bool sold=false;
+
     public void SellFish()
     {
+        if (sold!)
+        {
+            GameData.Instance.Money += FishValue;
+            GameData.Instance.OnGameDataChanged.Invoke();
+            StartCoroutine(FreezeGame());
+            sold = false;
+        }
 
-        GameData.Instance.Money += FishValue;
-        GameData.Instance.OnGameDataChanged.Invoke();
-        
+       
     }
 
 
@@ -28,11 +35,26 @@ public class FishSell : MonoBehaviour
     {
         if (transform.position.y > hand.transform.position.y)
         {
-            SellFish();
+           
             Destroy(this.gameObject);
+            SellFish();
             GameObject bite = GameObject.FindWithTag("Bite");
             bite.GetComponentInChildren<Attractor>().changeAttraction();
         }
             
     }
+  
+
+
+IEnumerator FreezeGame()
+{
+    
+    Time.timeScale = 0;
+
+    Debug.Log("Dsdasdsdad");
+    yield return new WaitForSecondsRealtime(1f);
+    
+    
+    Time.timeScale = 1;
+}
 }
