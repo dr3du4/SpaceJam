@@ -295,6 +295,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1311488856092134358, guid: b250b558b0e0cbc47b7ff21f67620394, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1311488856092134358, guid: b250b558b0e0cbc47b7ff21f67620394, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8660180699769044271, guid: b250b558b0e0cbc47b7ff21f67620394, type: 3}
       propertyPath: m_Name
       value: Player
@@ -358,7 +366,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 92498020143461063, guid: b250b558b0e0cbc47b7ff21f67620394, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: b250b558b0e0cbc47b7ff21f67620394, type: 3}
 --- !u!1 &756764254 stripped
 GameObject:

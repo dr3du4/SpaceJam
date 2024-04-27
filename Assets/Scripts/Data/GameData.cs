@@ -23,10 +23,23 @@ public class GameData : MonoBehaviour
     [field: SerializeField] public int BaitT2Amount { get; set; } = 0;
     [field: SerializeField] public int BaitT3Amount { get; set; } = 0;
     
-    
+    public int Health
+    {
+        get => health;
+        set
+        {
+            health = value;
+            if (health <= 0)
+            {
+                OnDeath.Invoke();
+            }
+        }
+    }
+
+    [SerializeField] private int health = 20;
 
     [Header("Events")]
     public UnityEvent OnGameDataChanged;
-
     public UnityEvent OnTimeEnd;
+    public UnityEvent OnDeath;
 }
