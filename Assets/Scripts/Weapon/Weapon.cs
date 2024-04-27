@@ -18,7 +18,8 @@ public class Weapon : MonoBehaviour
 
     protected virtual void Awake()
     {
-        playerTransform = GameObject.FindWithTag("Player").transform;
+        var playerScript = FindFirstObjectByType<Player>();
+        playerTransform = playerScript.BulletTarget;
         if (playerTransform == null)
         {
             Debug.LogError("There is no object with Player tag on!");

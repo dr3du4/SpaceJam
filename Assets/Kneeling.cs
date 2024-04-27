@@ -8,9 +8,26 @@ public class Kneeling : MonoBehaviour
 {
     public GameObject shield;
     public GameObject rod;
-    public bool canSpin=true;
     public GameObject followCamera;
     public GameObject shieldCamera;
+
+    public bool canSpin
+    {
+        get => spinDisableCount == 0;
+        set
+        {
+            if (!value)
+                spinDisableCount++;
+            else
+            {
+                spinDisableCount--;
+                if (spinDisableCount < 0)
+                    spinDisableCount = 0;
+            }
+        }
+    }
+
+    [SerializeField] private int spinDisableCount = 0;
     
     private void Start()
     {
@@ -20,7 +37,7 @@ public class Kneeling : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             canSpin = false;
             shield.SetActive(true);
@@ -28,7 +45,7 @@ public class Kneeling : MonoBehaviour
             shieldCamera.SetActive(true);
             followCamera.SetActive(false);
         }
-        else
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             canSpin = true;
             shield.SetActive(false);

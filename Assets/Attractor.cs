@@ -7,6 +7,8 @@ public class Attractor : MonoBehaviour
 {
     [SerializeField]
     AttractionParams AttractionParams;
+    [SerializeField] private SpriteRenderer baitRenderer;
+    [SerializeField] private List<Sprite> baitSprites;
     protected List<FishBase> attractedFish = new List<FishBase>();
     protected bool isCaught;
 
@@ -45,10 +47,14 @@ public class Attractor : MonoBehaviour
     {
         isCaught = false;
         AttractionParams.baitLevel = 0;
+        
+        baitRenderer.sprite = baitSprites[0];
     }
 
     public void changeBaitLevel(int level)
     {
         AttractionParams.baitLevel = level;
+        
+        baitRenderer.sprite = baitSprites[level];
     }
 }
