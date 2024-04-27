@@ -16,16 +16,16 @@ public class followingCamera : MonoBehaviour
     // Wskaźnik czasu reagowania kamery
     public float followSpeed = 5f;
 
-    void Update()
+    void LateUpdate()
     {
         // Jeśli cel jest przypisany, śledź jego położenie
         if (target != null)
         {
             // Oblicz docelową pozycję kamery względem celu
             Vector3 targetPosition = target.position + new Vector3(0, heightY, distanceZ);
-            
+
             // Płynnie zaktualizuj pozycję kamery do docelowej pozycji
-            transform.position = Vector3.Lerp(transform.position, targetPosition, followSpeed * Time.deltaTime);
+            transform.position = targetPosition;
         }
     }
 }

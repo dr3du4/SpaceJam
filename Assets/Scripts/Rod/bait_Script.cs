@@ -23,7 +23,7 @@ public class bait_Script : MonoBehaviour
     void Update()
     {
         // Sprawdź, czy obiekt znajduje się poniżej linii Y = 0
-        if (transform.position.y < rod.center.y)
+        if (transform.position.y < rod.center.y - 1.0f)
         {
             // Jeśli obiekt nie został wcześniej wykryty jako poniżej linii Y = 0
             if (!isBelowZeroY)
