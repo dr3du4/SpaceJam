@@ -320,7 +320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7635392526390470087, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_text
-      value: 'Quickstart
+      value: 'Guide
 
 '
       objectReference: {fileID: 0}
@@ -1277,8 +1277,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\n\nSzybki poradnik dla nowego w\u0119dkarza\nSpacja - zarzutka i wyci\u0105ganie
-    zdobyczy\nLewy shift - os\u0142ona\nLewy przycisk myszy - strza\u0142\n\nUdanych
-    \u0142ow\xF3w!"
+    zdobyczy w trybie wy\u0142awiania\nLewy shift - os\u0142ona\nTAB - prze\u0142\u0105czenie
+    pomi\u0119dzy trybem strzelania a wy\u0142awiania\nLewy przycisk myszy - strza\u0142
+    tylko w trybie strzelania\n\nUdanych \u0142ow\xF3w!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
