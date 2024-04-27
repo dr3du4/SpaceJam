@@ -651,6 +651,13 @@ MonoBehaviour:
   AttractionParams:
     origin: {fileID: 1136982422074906962}
     attractionChance: 0.5
+    baitLevel: 0
+  baitRenderer: {fileID: 4694575179180714855}
+  baitSprites:
+  - {fileID: -8323006876129148769, guid: 93babf2b57f24524cb45d34709111e67, type: 3}
+  - {fileID: 2586256738011337111, guid: 83bcda5862c08814ba265e2bc0eff4c3, type: 3}
+  - {fileID: -5717835280900468393, guid: 74b6eaa84fb21fc4c8e4336f7b673507, type: 3}
+  - {fileID: -1830413286251442718, guid: 0e891e0cc8a87044e915e553e6ae6b29, type: 3}
 --- !u!1 &8153015623545442967
 GameObject:
   m_ObjectHideFlags: 0
