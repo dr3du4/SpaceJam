@@ -41,6 +41,7 @@ public class FollowAndLaunch : MonoBehaviour
      
         if (isFollowing)
         {
+            rb.gravityScale = 1f;
             FollowTarget();
         }
 

@@ -20,17 +20,6 @@ public class bait_Script : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         fl = GetComponent<FollowAndLaunch>();
-
-        StartCoroutine(KurwaPorazkaZyciowa());
-    }
-
-    IEnumerator KurwaPorazkaZyciowa()
-    {
-        yield return new WaitForSeconds(0.5f);
-        yield return new WaitForFixedUpdate();
-        yield return new WaitForFixedUpdate();
-        yield return new WaitForFixedUpdate();
-        rb.gravityScale = 1f;
     }
 
     void Update()

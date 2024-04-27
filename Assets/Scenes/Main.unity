@@ -639,41 +639,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6975936560416065699, guid: 48df84352735ee743b980ff4bd06072d, type: 3}
-      propertyPath: OnFishSpawned.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6975936560416065699, guid: 48df84352735ee743b980ff4bd06072d, type: 3}
-      propertyPath: OnFishSpawned.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1222315476893460742, guid: 459789a6e4405ce41bf5b7868826df61, type: 3}
-    - target: {fileID: 6975936560416065699, guid: 48df84352735ee743b980ff4bd06072d, type: 3}
-      propertyPath: OnFishSpawned.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1222315476893460742, guid: c6cf048f3fc2b424c88c3b3f40f1fb86, type: 3}
-    - target: {fileID: 6975936560416065699, guid: 48df84352735ee743b980ff4bd06072d, type: 3}
-      propertyPath: OnFishSpawned.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 1222315476893460742, guid: 107f4f6dc5d3f0e43b3b90157809032b, type: 3}
-    - target: {fileID: 6975936560416065699, guid: 48df84352735ee743b980ff4bd06072d, type: 3}
-      propertyPath: OnFishSpawned.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6975936560416065699, guid: 48df84352735ee743b980ff4bd06072d, type: 3}
-      propertyPath: OnFishSpawned.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6975936560416065699, guid: 48df84352735ee743b980ff4bd06072d, type: 3}
-      propertyPath: OnFishSpawned.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 8446117222020276585, guid: 48df84352735ee743b980ff4bd06072d, type: 3}
       propertyPath: m_Name
       value: Fish Spawner
-      objectReference: {fileID: 0}
-    - target: {fileID: 8807544054589959414, guid: 48df84352735ee743b980ff4bd06072d, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.0315626
       objectReference: {fileID: 0}
     - target: {fileID: 8807544054589959414, guid: 48df84352735ee743b980ff4bd06072d, type: 3}
       propertyPath: m_LocalPosition.x
