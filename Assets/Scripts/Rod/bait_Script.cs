@@ -10,7 +10,7 @@ public class bait_Script : MonoBehaviour
     public float initialDistanceFromOrigin;
     public CircleeMovement rod;
     public bool isBelowZeroY = false;
-
+    public Kneeling player;
     [SerializeField] private FollowAndLaunch fl;
     public float drowing = 1f;
     public float movementSpeed = 1f;
@@ -34,10 +34,14 @@ public class bait_Script : MonoBehaviour
               
                 //rb.gravityScale = 0;
                 //isBelowZeroY = true; 
-                if (Input.GetKey(KeyCode.Space))
+                if(player.canSpin)
                 {
-                    Vector2 directionToOrigin = (rod.center.transform.position  - transform.position).normalized;
-                    transform.position += (Vector3)directionToOrigin * movementSpeed * Time.deltaTime;
+                    if (Input.GetKey(KeyCode.Space))
+                    {
+                        Vector2 directionToOrigin = (rod.center.transform.position  - transform.position).normalized;
+                        transform.position += (Vector3)directionToOrigin * movementSpeed * Time.deltaTime;
+                    }
+                    
                 }
             }
             
