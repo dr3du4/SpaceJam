@@ -16,7 +16,7 @@ public class FollowAndLaunch : MonoBehaviour
     
     public float launchForce = 500f;
     
-    private bool isFollowing = true;
+    public bool isFollowing = true;
     public GameObject mainCamera;
     public GameObject followingCamera;
     void Start()
@@ -61,12 +61,14 @@ public class FollowAndLaunch : MonoBehaviour
  
     void LaunchObject()
     {
-       Debug.Log("DSDSDDSD");
-        rb.gravityScale = 1;
+       
+        
         Vector2 launchDirection = new Vector2(Mathf.Cos(Mathf.Deg2Rad * 45), Mathf.Sin(Mathf.Deg2Rad * 45));
 
         rb.AddForce(launchDirection * launchForce, ForceMode2D.Impulse);
-     mainCamera.SetActive(false);
-     followingCamera.SetActive(true);
+        
+        
+        mainCamera.SetActive(false);
+        followingCamera.SetActive(true);
     }
 }
