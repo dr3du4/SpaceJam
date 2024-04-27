@@ -21,7 +21,7 @@ public class Attractor : MonoBehaviour
 
         if(collision.CompareTag("Fish"))
         {
-            // jeœli uda³o siê zatractowaæ rybe to dodaj do listy
+            // jeï¿½li udaï¿½o siï¿½ zatractowaï¿½ rybe to dodaj do listy
             if (collision.GetComponent<FishBase>().TryAttract(AttractionParams))
             {
                 attractedFish.Add(collision.GetComponent<FishBase>());
@@ -39,5 +39,10 @@ public class Attractor : MonoBehaviour
                 fish.currentState = State.roaming;
             }
         }
+    }
+
+    public void changeAttraction()
+    {
+        isCaught = false;
     }
 }
