@@ -41,7 +41,7 @@ public class FollowAndLaunch : MonoBehaviour
             FollowTarget();
         }
 
-        if (Vector3.Distance(transform.position,rod.center ) <= 0.1f)
+        if (Vector3.Distance(transform.position,rod.center.transform.position ) <= 0.1f)
         {
             isFollowing = true; 
             
@@ -66,7 +66,7 @@ public class FollowAndLaunch : MonoBehaviour
         Vector2 launchDirection = new Vector2(Mathf.Cos(Mathf.Deg2Rad * 45), Mathf.Sin(Mathf.Deg2Rad * 45));
 
         rb.AddForce(launchDirection * launchForce, ForceMode2D.Impulse);
-        
+       
         
         mainCamera.SetActive(false);
         followingCamera.SetActive(true);
