@@ -44,5 +44,11 @@ public class Attractor : MonoBehaviour
     public void changeAttraction()
     {
         isCaught = false;
+        AttractionParams.baitLevel = 0;
+    }
+
+    public void changeBaitLevel(int level)
+    {
+        AttractionParams.baitLevel = level;
     }
 }

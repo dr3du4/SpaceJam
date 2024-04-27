@@ -6,7 +6,7 @@ public class TestFish : FishBase
 {
     public override bool TryAttract(AttractionParams @params)
     {
-        if (Random.value < @params.attractionChance)
+        if (Random.value < @params.attractionChance && @params.baitLevel >= fishLevel)
         {
             currentState = State.chasing;
             this.target = @params.origin;

@@ -358,6 +358,7 @@ MonoBehaviour:
     MinDistanceY: 0
     MaxDistanceX: 1
     MaxDistanceY: 1
+  fishLevel: 1
   OnFishCatched:
     m_PersistentCalls:
       m_Calls: []

@@ -9,6 +9,7 @@ public class Equipment : MonoBehaviour
     [SerializeField] private TMP_Text baitT1AmountText;
     [SerializeField] private TMP_Text baitT2AmountText;
     [SerializeField] private TMP_Text baitT3AmountText;
+    [SerializeField] private Attractor attractor;
 
     private void Awake()
     {
@@ -34,9 +35,9 @@ public class Equipment : MonoBehaviour
             Debug.Log("There is no T1 bait to equip.");
             return;
         }
-        
+
         // TODO: Equip T1 bait
-        
+        attractor.changeBaitLevel(1);
         GameData.Instance.BaitT1Amount--;
         GameData.Instance.OnGameDataChanged.Invoke();
     }
@@ -48,9 +49,9 @@ public class Equipment : MonoBehaviour
             Debug.Log("There is no T2 bait to equip.");
             return;
         }
-        
+
         // TODO: Equip T2 bait
-        
+        attractor.changeBaitLevel(2);
         GameData.Instance.BaitT2Amount--;
         GameData.Instance.OnGameDataChanged.Invoke();
     }
@@ -62,9 +63,9 @@ public class Equipment : MonoBehaviour
             Debug.Log("There is no T3 bait to equip.");
             return;
         }
-        
+
         // TODO: Equip T3 bait
-        
+        attractor.changeBaitLevel(3);
         GameData.Instance.BaitT3Amount--;
         GameData.Instance.OnGameDataChanged.Invoke();
     }

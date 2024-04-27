@@ -10,7 +10,7 @@ public struct AttractionParams
 {
     public Transform origin;
     public float attractionChance;
-  
+    public int baitLevel;
 }
 
 public enum State
@@ -29,6 +29,7 @@ public abstract class FishBase : MonoBehaviour
     [SerializeField] private Transform attachPoint;
     public float chaseSpeed;
     public FishSpawnSettings SpawnSettings;
+    public int fishLevel;
 
     [Header("Events")]
     public UnityEvent OnFishCatched;
