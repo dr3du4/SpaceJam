@@ -8,6 +8,7 @@ using Random = UnityEngine.Random;
 [Serializable]
 public struct AttractionParams
 {
+    public Transform origin;
     public float attractionChance;
 }
 
@@ -23,17 +24,18 @@ public abstract class FishBase : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private AnimationCurve fishTimePositionX;
     [SerializeField] private AnimationCurve fishTimePositionY;
+    public float chaseSpeed;
     public FishSpawnSettings SpawnSettings;
 
     [Header("Events")]
     public UnityEvent OnFishCatched;
     
-    public abstract void TryAttract(AttractionParams @params, Transform target);
+    public abstract bool TryAttract(AttractionParams @params);
 
     protected BoxCollider2D fishCollider;
     protected Vector3 startingPosition;
     protected Vector2 randomTimeOffset;
-    protected State currentState;
+    public State currentState;
     protected Transform target;
 
     protected virtual void Awake()
@@ -52,16 +54,17 @@ public abstract class FishBase : MonoBehaviour
                 transform.position = startingPosition + new Vector3(fishTimePositionX.Evaluate(Time.time + randomTimeOffset.x), fishTimePositionY.Evaluate(Time.time + randomTimeOffset.y), 0);
                 break;
             case State.chasing:
-                transform.position = Vector3.MoveTowards(transform.position, target.position, 0.2f);
+                transform.position = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime * chaseSpeed);
                 break;
         }
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Bite"))
+        if (other.CompareTag("Bite") && currentState == State.chasing)
         {
+            other.GetComponentInChildren<Attractor>().ClearAttraction(this);
             Catch();
             OnFishCatched?.Invoke();
         }
@@ -69,7 +72,7 @@ public abstract class FishBase : MonoBehaviour
 
     public virtual void Catch()
     {
-        // TODO: Catching logic
+        Debug.Log("Catch invoked!");
     }
 
     public virtual bool CanSpawn(FishSpawnParams @params)

@@ -702,6 +702,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1493217128 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1136982422074906962, guid: c46d436134ef418468624cb3c15ec5df, type: 3}
+  m_PrefabInstance: {fileID: 1728271368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1499397185
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -811,6 +816,10 @@ PrefabInstance:
       propertyPath: rod
       value: 
       objectReference: {fileID: 2111064599}
+    - target: {fileID: 2534046544234793962, guid: c46d436134ef418468624cb3c15ec5df, type: 3}
+      propertyPath: drowing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2717316226769511721, guid: c46d436134ef418468624cb3c15ec5df, type: 3}
       propertyPath: rod
       value: 
@@ -830,6 +839,18 @@ PrefabInstance:
     - target: {fileID: 2824856096694615484, guid: c46d436134ef418468624cb3c15ec5df, type: 3}
       propertyPath: center.y
       value: -1.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3461822407073126260, guid: c46d436134ef418468624cb3c15ec5df, type: 3}
+      propertyPath: m_TagString
+      value: Bite
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585871789076184692, guid: c46d436134ef418468624cb3c15ec5df, type: 3}
+      propertyPath: AttractionParams.origin
+      value: 
+      objectReference: {fileID: 1493217128}
+    - target: {fileID: 5585871789076184692, guid: c46d436134ef418468624cb3c15ec5df, type: 3}
+      propertyPath: AttractionParams.attractionChance
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7275155548354035190, guid: c46d436134ef418468624cb3c15ec5df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -874,6 +895,10 @@ PrefabInstance:
     - target: {fileID: 7430030881126723639, guid: c46d436134ef418468624cb3c15ec5df, type: 3}
       propertyPath: m_Name
       value: FishingRod
+      objectReference: {fileID: 0}
+    - target: {fileID: 8134429200616119323, guid: c46d436134ef418468624cb3c15ec5df, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
