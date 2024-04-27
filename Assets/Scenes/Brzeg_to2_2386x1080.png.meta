@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Brzeg_to2_2386x1080_0: -5000931102176449252
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

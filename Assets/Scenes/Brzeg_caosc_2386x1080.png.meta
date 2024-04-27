@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Brzeg_caosc_2386x1080_0: 1286937475003344622
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
