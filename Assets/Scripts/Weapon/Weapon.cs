@@ -52,7 +52,7 @@ public class Weapon : MonoBehaviour
 
     public virtual void TryShoot()
     {
-        if (!timer.IsFinished())
+        if (!timer.IsFinished() || fish.Dead)
             return;
         
         Shoot();

@@ -32,12 +32,15 @@ public abstract class FishBase : MonoBehaviour
     public int fishLevel;
     public int fishHealth = 1;
     public GameObject damageEffect;
+    public bool Dead => fishHealth <= 0;
 
     [Header("Events")]
     public UnityEvent OnFishCatched;
-    
+    public UnityEvent OnFishDied;
+
     public abstract bool TryAttract(AttractionParams @params);
 
+    protected SpriteRenderer fishRenderer;
     protected BoxCollider2D fishCollider;
     protected Vector3 startingPosition;
     protected Vector2 randomTimeOffset;
@@ -47,6 +50,7 @@ public abstract class FishBase : MonoBehaviour
     protected virtual void Awake()
     {
         fishCollider = GetComponent<BoxCollider2D>();
+        fishRenderer = GetComponent<SpriteRenderer>();
         startingPosition = transform.position;
         randomTimeOffset = new Vector2(Random.value, Random.value);
         currentState = State.roaming;
@@ -57,6 +61,8 @@ public abstract class FishBase : MonoBehaviour
         switch (currentState)
         {
             case State.roaming:
+                if (Dead)
+                    break;
                 transform.position = startingPosition + new Vector3(fishTimePositionX.Evaluate(Time.time + randomTimeOffset.x), fishTimePositionY.Evaluate(Time.time + randomTimeOffset.y), 0);
                 break;
             case State.chasing:
@@ -67,6 +73,16 @@ public abstract class FishBase : MonoBehaviour
                 break;
         }
         
+    }
+    
+    IEnumerator DamageEffect()
+    {
+        fishRenderer.color = Color.red;
+        for (var i = 0; i < 10; i++)
+        {
+            fishRenderer.color = Vector4.MoveTowards(fishRenderer.color, Color.white, 0.1f);
+            yield return new WaitForSeconds(0.2f);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -82,6 +98,16 @@ public abstract class FishBase : MonoBehaviour
         {
             Instantiate(damageEffect, transform.position, Quaternion.identity);
             Destroy(other.gameObject);
+
+            if (fishHealth > 1)
+                StartCoroutine(DamageEffect());
+
+            fishHealth--;
+            if (fishHealth <= 0)
+            {
+                fishRenderer.color = Color.yellow;
+                OnFishDied?.Invoke();
+            }
         }
     }
 

@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Podbierak_0: 292088960933352600
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
