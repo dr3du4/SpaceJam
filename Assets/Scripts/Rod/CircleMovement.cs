@@ -49,10 +49,13 @@ public class CircleeMovement : MonoBehaviour
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if (fl.isFollowing && !Input.GetButton("Jump")) { fl.readyToCast = true; }
-        if (fl.isFollowing == true && Input.GetButton("Jump") && fl.readyToCast)
+        if (fl.isFollowing && !Input.GetButton("Jump"))
+        {
+            fl.readyToCast = true;
+        }
+        if (fl.isFollowing == true && Input.GetButton("Jump") && fl.readyToCast == true)
         {
             currentAngle -= angularSpeed * Time.deltaTime;
 
