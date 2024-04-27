@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ukleja_0: 6392717542838480654
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
