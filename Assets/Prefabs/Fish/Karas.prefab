@@ -359,7 +359,13 @@ MonoBehaviour:
     MaxDistanceX: 1
     MaxDistanceY: 1
   fishLevel: 1
+  fishHealth: 2
+  explosion: {fileID: 8300000, guid: 6bd0013ec9730914481b60ccd04638e6, type: 3}
+  damageEffect: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4, type: 3}
   OnFishCatched:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFishDied:
     m_PersistentCalls:
       m_Calls: []
   currentState: 0
@@ -376,3 +382,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FishValue: 10
+  cashout: {fileID: 8300000, guid: 65de13c8143650e4195fb89622c40ff9, type: 3}

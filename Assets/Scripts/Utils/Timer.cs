@@ -13,8 +13,8 @@ public class Timer
         start = Time.time;
     }
     
-    public bool IsFinished()
+    public bool IsFinished(float multiplier = 1f)
     {
-        return Time.time - start >= duration;
+        return Time.time - start >= duration * multiplier;
     }
 }

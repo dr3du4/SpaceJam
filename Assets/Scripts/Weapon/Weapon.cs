@@ -52,7 +52,12 @@ public class Weapon : MonoBehaviour
 
     public virtual void TryShoot()
     {
-        if (!timer.IsFinished())
+        var dist = Vector3.Distance(transform.position, playerTransform.position) / 13;
+
+        var multiplier = Mathf.Log(dist) + 1;
+        if (multiplier > 1f)
+            multiplier = 1f;
+        if (!timer.IsFinished(multiplier) || fish.Dead)
             return;
         
         Shoot();

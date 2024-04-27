@@ -69,4 +69,9 @@ public class Equipment : MonoBehaviour
         GameData.Instance.BaitT3Amount--;
         GameData.Instance.OnGameDataChanged.Invoke();
     }
+
+    public void updateEq()
+    {
+        GameData.Instance.OnGameDataChanged.Invoke();
+    }
 }
