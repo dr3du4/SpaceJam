@@ -143,17 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<< HEAD
-<<<<<<< HEAD
     nameFileIdTable:
       kulaBlota_0: 9054938624742896048
-=======
-    nameFileIdTable: {}
->>>>>>> bd0a597 (Wielki refactor bronii)
-=======
-    nameFileIdTable:
-      kulaBlota_0: 9054938624742896048
->>>>>>> 5dfd6ef (Szybki tutorial zrobiony jeszcze szybciej)
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
