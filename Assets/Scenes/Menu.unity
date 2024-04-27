@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 875793934503992081, guid: 3bb41a83d82361647936fcc272ea3678, type: 3}
+  m_Sprite: {fileID: 3222248679892150495, guid: f051bf3d9a675174db586eea9bf63918, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -264,11 +264,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2688545285439253053, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 500
+      value: -540
       objectReference: {fileID: 0}
     - target: {fileID: 2688545285439253053, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 100
+      value: -178
       objectReference: {fileID: 0}
     - target: {fileID: 2688545285439253053, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -284,7 +284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4800835044081200773, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_Name
-      value: MenuButton (1)
+      value: About
       objectReference: {fileID: 0}
     - target: {fileID: 5124283459009844170, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -292,15 +292,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5124283459009844170, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5124283459009844170, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 151186725}
+      objectReference: {fileID: 673513632}
     - target: {fileID: 5124283459009844170, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5124283459009844170, guid: 30df278867ff03743af9979090ef660b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5124283459009844170, guid: 30df278867ff03743af9979090ef660b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5124283459009844170, guid: 30df278867ff03743af9979090ef660b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5124283459009844170, guid: 30df278867ff03743af9979090ef660b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7635392526390470087, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_text
@@ -316,17 +332,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2688545285439253053, guid: 30df278867ff03743af9979090ef660b, type: 3}
   m_PrefabInstance: {fileID: 151186723}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &151186725 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4127982327966396508, guid: 30df278867ff03743af9979090ef660b, type: 3}
-  m_PrefabInstance: {fileID: 151186723}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b4c77b5556709f45ad0e16bc9847b31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &160623768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -397,11 +402,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2688545285439253053, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 600
+      value: -614
       objectReference: {fileID: 0}
     - target: {fileID: 2688545285439253053, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -100
+      value: -385
       objectReference: {fileID: 0}
     - target: {fileID: 2688545285439253053, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -417,7 +422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4800835044081200773, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_Name
-      value: MenuButton (2)
+      value: Quit
       objectReference: {fileID: 0}
     - target: {fileID: 5124283459009844170, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -595,7 +600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &673513633
 RectTransform:
   m_ObjectHideFlags: 0
@@ -725,11 +730,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2688545285439253053, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 400
+      value: -409
       objectReference: {fileID: 0}
     - target: {fileID: 2688545285439253053, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 300
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 2688545285439253053, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -745,7 +750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4800835044081200773, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_Name
-      value: MenuButton
+      value: Start
       objectReference: {fileID: 0}
     - target: {fileID: 5124283459009844170, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1029,29 +1034,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuButton (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4800835044081200773, guid: 30df278867ff03743af9979090ef660b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5124283459009844170, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5124283459009844170, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5124283459009844170, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1071483299}
+      objectReference: {fileID: 673513632}
     - target: {fileID: 5124283459009844170, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5124283459009844170, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: QuitePanel
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 5124283459009844170, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Menu, Assembly-CSharp
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5124283459009844170, guid: 30df278867ff03743af9979090ef660b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1071,17 +1080,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2688545285439253053, guid: 30df278867ff03743af9979090ef660b, type: 3}
   m_PrefabInstance: {fileID: 1071483297}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1071483299 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4127982327966396508, guid: 30df278867ff03743af9979090ef660b, type: 3}
-  m_PrefabInstance: {fileID: 1071483297}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b4c77b5556709f45ad0e16bc9847b31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1497082623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,10 +1146,10 @@ MonoBehaviour:
     morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas
     dapibus blandit bibendum.
 
-    
 
-    Praesent quis mollis metus. Mauris sed
-    nisl pharetra, ultrices erat vel, tempus justo. Maecenas et neque eu urna consequat
+
+    Praesent quis mollis metus. Mauris sed nisl
+    pharetra, ultrices erat vel, tempus justo. Maecenas et neque eu urna consequat
     varius. Pellentesque vulputate lorem sed iaculis tempus. Donec convallis massa
     lacus, vitae tempus eros egestas at. Nullam vestibulum luctus elementum. Nam
     feugiat at justo vitae semper. Nam accumsan consectetur magna, sit amet tempor
@@ -1159,15 +1157,14 @@ MonoBehaviour:
     a tellus non diam rutrum laoreet pretium nec arcu. Aenean in arcu libero. Etiam
     eros nibh, feugiat a nibh eget, vulputate placerat lectus.
 
-    
 
-    Nam augue
-    felis, sollicitudin molestie tristique tincidunt, luctus et orci. Vivamus eget
-    lacus auctor leo ultricies euismod nec eu turpis. Duis vitae interdum dolor.
-    Suspendisse vulputate non augue non consequat. Suspendisse blandit fringilla
-    congue. Integer faucibus lacus felis, in mollis leo finibus in. In rutrum luctus
-    metus, a faucibus lectus egestas vitae. Suspendisse quis risus et libero luctus
-    lobortis.'
+
+    Nam augue felis,
+    sollicitudin molestie tristique tincidunt, luctus et orci. Vivamus eget lacus
+    auctor leo ultricies euismod nec eu turpis. Duis vitae interdum dolor. Suspendisse
+    vulputate non augue non consequat. Suspendisse blandit fringilla congue. Integer
+    faucibus lacus felis, in mollis leo finibus in. In rutrum luctus metus, a faucibus
+    lectus egestas vitae. Suspendisse quis risus et libero luctus lobortis.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

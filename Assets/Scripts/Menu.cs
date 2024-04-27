@@ -7,7 +7,7 @@ public class Menu : MonoBehaviour
    public GameObject panel;
    public void startGame()
    {
-      SceneManager.LoadScene("gra");
+      SceneManager.LoadScene("Main");
    }
 
    public void AboutGame()

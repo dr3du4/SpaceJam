@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ryba_WIoslonos_0: 1447148074055415698
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
