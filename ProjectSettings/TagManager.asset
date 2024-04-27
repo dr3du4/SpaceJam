@@ -8,6 +8,8 @@ TagManager:
   - Bite
   - Water
   - hand
+  - Real Player
+  - Bullet
   layers:
   - Default
   - TransparentFX
