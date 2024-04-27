@@ -10,6 +10,7 @@ public class GameDataVisualization : MonoBehaviour
     [SerializeField] private TMP_Text quotaText;
     [SerializeField] private TMP_Text ammoText;
     [SerializeField] private TMP_Text timeRemaining;
+    [SerializeField] private Canvas endScreen;
 
     private void Start()
     {
@@ -29,9 +30,20 @@ public class GameDataVisualization : MonoBehaviour
 
         if (seconds <= 0)
         {
-            GameData.Instance.OnTimeEnd?.Invoke();
+
             Debug.Log("Time end!");
-            GameData.Instance.StartTime = Time.time;
+            if(GameData.Instance.Quota >= GameData.Instance.Money)
+            {
+                GameData.Instance.OnTimeEnd?.Invoke();
+            }
+            else
+            {
+                GameData.Instance.Money = GameData.Instance.Money - GameData.Instance.Quota;
+                GameData.Instance.Quota = GameData.Instance.Quota * 2;
+                GameData.Instance.StartTime = Time.time;
+                UpdateUI();
+            }
+
         }
     }
 
@@ -41,4 +53,5 @@ public class GameDataVisualization : MonoBehaviour
         quotaText.text = $"Quota: {GameData.Instance.Quota}$";
         ammoText.text = $"Ammo: {GameData.Instance.Ammo}";
     }
+
 }
