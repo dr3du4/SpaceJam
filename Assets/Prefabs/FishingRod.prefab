@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 2534046544234793962}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Bite
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -556,6 +556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttractionParams:
+    origin: {fileID: 1136982422074906962}
     attractionChance: 1
 --- !u!1 &8662573296257522233
 GameObject:

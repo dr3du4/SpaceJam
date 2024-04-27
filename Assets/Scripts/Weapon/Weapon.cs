@@ -63,8 +63,8 @@ public class Weapon : MonoBehaviour
 
     protected virtual void Shoot()
     {
-        var direction = (playerTransform.position - transform.position).normalized;
-        var bullet = Instantiate(bulletPrefab, transform.position, Quaternion.LookRotation(direction));
+        var direction = (new Vector2(playerTransform.position.x, playerTransform.position.y) - new Vector2(transform.position.x, transform.position.y)).normalized;
+        var bullet = Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0f, 0f, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg));
         bullet.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
     }
     
