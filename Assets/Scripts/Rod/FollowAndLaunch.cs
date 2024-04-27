@@ -17,43 +17,46 @@ public class FollowAndLaunch : MonoBehaviour
     public float launchForce = 500f;
     
     public bool isFollowing = true;
+    public bool readyToCast = true;
     public GameObject mainCamera;
     public GameObject followingCamera;
+
     void Start()
     {
-        
         rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
         
-        if (Input.GetKeyUp(KeyCode.Space) && isFollowing)
+        if (Input.GetKeyUp(KeyCode.Space) && isFollowing && readyToCast)
         {
             LaunchObject();
             isFollowing = false;
+            readyToCast = false;
             
         }
-
      
         if (isFollowing)
         {
             FollowTarget();
         }
 
-        if (Vector3.Distance(transform.position,rod.center.transform.position ) <= 0.1f)
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && isFollowing == false)
         {
-            isFollowing = true; 
-            
+            isFollowing = true;
+            mainCamera.SetActive(true);
+            followingCamera.SetActive(false);
         }
     }
 
-   
     void FollowTarget()
     {
         if (target != null)
         {
-          
             transform.position = target.position;
         }
     }

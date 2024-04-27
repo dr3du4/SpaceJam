@@ -38,19 +38,17 @@ public class bait_Script : MonoBehaviour
             if (!isBelowZeroY && !fl.isFollowing)
             {
                 initialDistanceFromOrigin = Vector2.Distance(transform.position, rod.center.transform.position );
-              
-         
             }
             if(isBelowZeroY&& !fl.isFollowing)
             {
               
                 rb.gravityScale = 0;
                 isBelowZeroY = true; 
-        if (Input.GetKey(KeyCode.Space))
-        {
-            Vector2 directionToOrigin = (rod.center.transform.position  - transform.position).normalized;
-            transform.position += (Vector3)directionToOrigin * movementSpeed * Time.deltaTime;
-        }
+                if (Input.GetKey(KeyCode.Space))
+                {
+                    Vector2 directionToOrigin = (rod.center.transform.position  - transform.position).normalized;
+                    transform.position += (Vector3)directionToOrigin * movementSpeed * Time.deltaTime;
+                }
             }
             if (Vector3.Distance(transform.position, rod.center.transform.position ) <= 0.2f)
             {

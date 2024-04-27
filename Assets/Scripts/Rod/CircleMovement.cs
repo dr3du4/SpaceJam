@@ -19,31 +19,16 @@ public class CircleeMovement : MonoBehaviour
     public Transform objectToFollow;
 
 
-    private bool isSpacePressed = false;
-
     void Start()
     {
-
         currentAngle = endAngle;
     }
 
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (fl.isFollowing && !Input.GetButton("Jump")) { fl.readyToCast = true; }
+        if (fl.isFollowing == true && Input.GetButton("Jump") && fl.readyToCast)
         {
-            isSpacePressed = true;
-        }
-       
-        else if (Input.GetKeyUp(KeyCode.Space))
-        {
-            isSpacePressed = false;
-        }
-
-        if (fl.isFollowing == true)
-        {
-            if (isSpacePressed)
-            {
 
                 currentAngle -= angularSpeed * Time.deltaTime;
 
@@ -75,7 +60,7 @@ public class CircleeMovement : MonoBehaviour
                     objectToFollow.position = endPosition;
 
                 }
-            }
+                return;
         }
         else
         {
