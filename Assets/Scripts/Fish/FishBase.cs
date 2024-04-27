@@ -31,6 +31,7 @@ public abstract class FishBase : MonoBehaviour
     public FishSpawnSettings SpawnSettings;
     public int fishLevel;
     public int fishHealth = 1;
+    public AudioClip explosion;
     public GameObject damageEffect;
     public bool Dead => fishHealth <= 0;
 
@@ -97,10 +98,12 @@ public abstract class FishBase : MonoBehaviour
         if (other.CompareTag("Player Bullet"))
         {
             Instantiate(damageEffect, transform.position, Quaternion.identity);
+            AudioSource.PlayClipAtPoint(explosion, transform.position);
             Destroy(other.gameObject);
 
             if (fishHealth > 1)
                 StartCoroutine(DamageEffect());
+                
 
             fishHealth--;
             if (fishHealth <= 0)

@@ -9,6 +9,7 @@ public class FishSell : MonoBehaviour
 {
     private GameObject hand;
     public int FishValue;
+    public AudioClip cashout;
     private FishBase fb;
     private bool sold=false;
 
@@ -34,7 +35,7 @@ public class FishSell : MonoBehaviour
     {
         if (transform.position.y > hand.transform.position.y)
         {
-           
+            AudioSource.PlayClipAtPoint(cashout, transform.position);
             Destroy(this.gameObject);
             SellFish();
             GameObject bite = GameObject.FindWithTag("Bite");
