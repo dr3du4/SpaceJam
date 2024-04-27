@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cfc5bfbbddfb5004f97014582bb39b0c
+guid: 1c4dc41a00a59b1418bd37714abede2c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2732200362883988084
-    second: ukulele_0
+      213: -2713498905222020813
+    second: MaskaJelcza_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ukulele_0
+      name: MaskaJelcza_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1244
-        height: 412
+        x: 22
+        y: 4
+        width: 159
+        height: 312
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,8 +127,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 47ab4e411c9bae520800000000000000
-      internalID: 2732200362883988084
+      spriteID: 33184d75f17b75ad0800000000000000
+      internalID: -2713498905222020813
       vertices: []
       indices: 
       edges: []
@@ -144,7 +144,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ukulele_0: 2732200362883988084
+      MaskaJelcza_0: -2713498905222020813
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
