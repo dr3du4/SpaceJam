@@ -1,18 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Attractor : MonoBehaviour
 {
     [SerializeField]
     AttractionParams AttractionParams;
+    protected List<FishBase> attractedFish = new List<FishBase>();
+    protected bool isCaught;
+
+    private void Start()
+    {
+        isCaught = false;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Collision detected!");
+        if (isCaught) return;
+
         if(collision.CompareTag("Fish"))
         {
-            Debug.Log("Right target found!");
-            collision.GetComponent<FishBase>().TryAttract(AttractionParams, transform);
+            // jeœli uda³o siê zatractowaæ rybe to dodaj do listy
+            if (collision.GetComponent<FishBase>().TryAttract(AttractionParams))
+            {
+                attractedFish.Add(collision.GetComponent<FishBase>());
+            }
+        }
+    }
+
+    public void ClearAttraction(FishBase caughtFish)
+    {
+        isCaught = true;
+        foreach(FishBase fish in attractedFish)
+        {
+            if(!ReferenceEquals(fish, caughtFish))
+            {
+                fish.currentState = State.roaming;
+            }
         }
     }
 }

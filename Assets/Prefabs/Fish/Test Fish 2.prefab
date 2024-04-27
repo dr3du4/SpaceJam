@@ -212,13 +212,12 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 0
     m_RotationOrder: 4
+  chaseSpeed: 2
   SpawnSettings:
     MinDistanceX: 0
     MinDistanceY: 0
     MaxDistanceX: 0.5
     MaxDistanceY: 0.5
-  AttractionParams:
-    attractionChance: 0.5
   OnFishCatched:
     m_PersistentCalls:
       m_Calls: []
