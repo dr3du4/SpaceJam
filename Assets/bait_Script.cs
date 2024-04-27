@@ -32,7 +32,7 @@ public class bait_Script : MonoBehaviour
                 initialDistanceFromOrigin = Vector2.Distance(transform.position, rod.center);
 
                 // Wyłącz `Rigidbody2D`
-                rb.simulated = false;
+                rb.gravityScale = 0;
 
                 // Ustaw flagę
                 isBelowZeroY = true;
