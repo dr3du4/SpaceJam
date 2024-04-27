@@ -9,6 +9,7 @@ public class FishSell : MonoBehaviour
 {
     private GameObject hand;
     public int FishValue;
+    private FishBase fb;
     public void SellFish()
     {
 
@@ -29,6 +30,8 @@ public class FishSell : MonoBehaviour
         {
             SellFish();
             Destroy(this.gameObject);
+            GameObject bite = GameObject.FindWithTag("Bite");
+            bite.GetComponentInChildren<Attractor>().changeAttraction();
         }
             
     }
