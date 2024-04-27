@@ -47,6 +47,10 @@ public class bait_Script : MonoBehaviour
             {
                 transform.position += Vector3.down * drowing * Time.deltaTime;
             }
+            if (Vector2.Distance(transform.position, rod.center) >= initialDistanceFromOrigin+lineOffset && isBelowZeroY && transform.position.x > rod.center.x+1)
+            {
+                transform.position += Vector3.left * drowing * Time.deltaTime;
+            }
            
             
         }
