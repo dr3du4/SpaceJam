@@ -383,5 +383,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a21b8a634bbb411492c29342010df5ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FishValue: 15
+  FishValue: 40
   cashout: {fileID: 8300000, guid: 65de13c8143650e4195fb89622c40ff9, type: 3}
