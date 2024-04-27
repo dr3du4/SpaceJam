@@ -10,6 +10,7 @@ public struct AttractionParams
 {
     public Transform origin;
     public float attractionChance;
+  
 }
 
 public enum State

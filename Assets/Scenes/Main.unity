@@ -806,6 +806,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: endRod
       objectReference: {fileID: 0}
+    - target: {fileID: 6826210058444851179, guid: c46d436134ef418468624cb3c15ec5df, type: 3}
+      propertyPath: m_TagString
+      value: RodEnd
+      objectReference: {fileID: 0}
     - target: {fileID: 7275155548354035190, guid: c46d436134ef418468624cb3c15ec5df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.42
