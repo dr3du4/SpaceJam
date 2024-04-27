@@ -14,13 +14,12 @@ public class FishSell : MonoBehaviour
 
     public void SellFish()
     {
-        if (sold!)
-        {
+    
+        
             GameData.Instance.Money += FishValue;
             GameData.Instance.OnGameDataChanged.Invoke();
-            StartCoroutine(FreezeGame());
-            sold = false;
-        }
+            
+        
 
        
     }
