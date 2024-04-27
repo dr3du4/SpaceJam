@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8596811584998198681}
   m_Layer: 0
   m_Name: Test Fish 3
-  m_TagString: Untagged
+  m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -199,6 +199,8 @@ MonoBehaviour:
     MinDistanceY: 0.5
     MaxDistanceX: 1
     MaxDistanceY: 1
+  AttractionParams:
+    attractionChance: 2
   OnFishCatched:
     m_PersistentCalls:
       m_Calls: []
