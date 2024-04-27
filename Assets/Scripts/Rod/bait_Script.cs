@@ -6,10 +6,10 @@ public class bait_Script : MonoBehaviour
 {
 
 
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     public float initialDistanceFromOrigin;
     public CircleeMovement rod;
-    private bool isBelowZeroY = false;
+    public bool isBelowZeroY = false;
 
     [SerializeField] private FollowAndLaunch fl;
     public float drowing = 1f;
@@ -26,35 +26,21 @@ public class bait_Script : MonoBehaviour
 
     void Update()
     {
-
-        if (transform.position.y < rod.center.transform.position.y - offsetCoast)
-        {
-            isBelowZeroY = true;
-            
-        }
-
-        
            
-            if (!isBelowZeroY && !fl.isFollowing)
+            if (!isBelowZeroY)
             {
                 initialDistanceFromOrigin = Vector2.Distance(transform.position, rod.center.transform.position );
             }
             if(isBelowZeroY&& !fl.isFollowing)
             {
               
-                rb.gravityScale = 0;
-                isBelowZeroY = true; 
+                //rb.gravityScale = 0;
+                //isBelowZeroY = true; 
                 if (Input.GetKey(KeyCode.Space))
                 {
                     Vector2 directionToOrigin = (rod.center.transform.position  - transform.position).normalized;
                     transform.position += (Vector3)directionToOrigin * movementSpeed * Time.deltaTime;
                 }
-            }
-            if (Vector3.Distance(transform.position, rod.center.transform.position ) <= 0.2f)
-            {
-                fl.isFollowing = true;
-                rb.gravityScale = 1f;
-                isBelowZeroY = false;
             }
             
             
@@ -73,6 +59,13 @@ public class bait_Script : MonoBehaviour
       
     }
 
-   
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Water"))
+        {
+            isBelowZeroY = true;
+            rb.gravityScale = 0;
+        }
+    }
 }
 

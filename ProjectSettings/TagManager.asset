@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fish
   - Bite
+  - Water
   layers:
   - Default
   - TransparentFX

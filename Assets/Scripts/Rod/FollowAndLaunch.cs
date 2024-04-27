@@ -12,6 +12,7 @@ public class FollowAndLaunch : MonoBehaviour
    
 
     private Rigidbody2D rb;
+    private bait_Script bs;
     public CircleeMovement rod;
     
     public float launchForce = 500f;
@@ -24,6 +25,7 @@ public class FollowAndLaunch : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        bs = GetComponentInChildren<bait_Script>();
     }
 
     void Update()
@@ -50,6 +52,8 @@ public class FollowAndLaunch : MonoBehaviour
             isFollowing = true;
             mainCamera.SetActive(true);
             followingCamera.SetActive(false);
+            bs.rb.gravityScale = 1f;
+            bs.isBelowZeroY = false;
         }
     }
 
