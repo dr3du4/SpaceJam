@@ -26,18 +26,30 @@ public class bait_Script : MonoBehaviour
 
     void Update()
     {
-       
-        if (transform.position.y < rod.center.transform.position.y  - offsetCoast)
+
+        if (transform.position.y < rod.center.transform.position.y - offsetCoast)
         {
+            isBelowZeroY = true;
+            
+        }
+
+        
            
             if (!isBelowZeroY && !fl.isFollowing)
             {
                 initialDistanceFromOrigin = Vector2.Distance(transform.position, rod.center.transform.position );
+              
+         
+            }
+            if(isBelowZeroY&& !fl.isFollowing)
+            {
+              
                 rb.gravityScale = 0;
                 isBelowZeroY = true;
             }
             if (Vector3.Distance(transform.position, rod.center.transform.position ) <= 0.1f)
             {
+                fl.isFollowing = true;
                 rb.gravityScale = 1f;
                 isBelowZeroY = false;
             }
@@ -53,7 +65,7 @@ public class bait_Script : MonoBehaviour
             }
            
             
-        }
+        
       
        
         if (Input.GetKey(KeyCode.Space))
