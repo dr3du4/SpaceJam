@@ -26,6 +26,7 @@ public abstract class FishBase : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private AnimationCurve fishTimePositionX;
     [SerializeField] private AnimationCurve fishTimePositionY;
+    [SerializeField] private Transform attachPoint;
     public float chaseSpeed;
     public FishSpawnSettings SpawnSettings;
 
@@ -56,10 +57,10 @@ public abstract class FishBase : MonoBehaviour
                 transform.position = startingPosition + new Vector3(fishTimePositionX.Evaluate(Time.time + randomTimeOffset.x), fishTimePositionY.Evaluate(Time.time + randomTimeOffset.y), 0);
                 break;
             case State.chasing:
-                transform.position = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime * chaseSpeed);
+                transform.position = Vector3.MoveTowards(transform.position, target.position - attachPoint.localPosition, Time.deltaTime * chaseSpeed);
                 break;
             case State.bite:
-                transform.position = target.position;
+                transform.position = target.position - attachPoint.localPosition;
                 break;
         }
         

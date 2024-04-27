@@ -22,50 +22,57 @@ public class CircleeMovement : MonoBehaviour
     void Start()
     {
         currentAngle = endAngle;
+
+        updateRotation();
     }
 
-    void Update()
+    void updateRotation()
     {
-        if (fl.isFollowing && !Input.GetButton("Jump")) { fl.readyToCast = true; }
-        if (fl.isFollowing == true && Input.GetButton("Jump") && fl.readyToCast)
+
+        float x = Mathf.Cos(currentAngle * Mathf.Deg2Rad) * radius;
+        float y = Mathf.Sin(currentAngle * Mathf.Deg2Rad) * radius;
+
+
+        Vector2 endPosition = new Vector2(x, y) + (Vector2)center.transform.position;
+        Vector2 direction = endPosition - (Vector2)center.transform.position;
+
+        transform.position = endPosition - direction;
+
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, angle);
+
+        if (objectToFollow != null)
         {
+            objectToFollow.position = endPosition;
 
-                currentAngle -= angularSpeed * Time.deltaTime;
-
-                if (currentAngle < endAngle)
-                {
-                    currentAngle = startAngle;
-                }
-                else if (currentAngle > startAngle)
-                {
-                    currentAngle = endAngle;
-                }
-
-
-                float x = Mathf.Cos(currentAngle * Mathf.Deg2Rad) * radius;
-                float y = Mathf.Sin(currentAngle * Mathf.Deg2Rad) * radius;
-
-
-                Vector2 endPosition = new Vector2(x, y) + (Vector2)center.transform.position;
-                Vector2 direction = endPosition - (Vector2)center.transform.position;
-
-                transform.position = endPosition - direction;
-
-
-                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-                transform.rotation = Quaternion.Euler(0, 0, angle);
-
-                if (objectToFollow != null)
-                {
-                    objectToFollow.position = endPosition;
-
-                }
-                return;
         }
-        else
+    }
+
+    void FixedUpdate()
+    {
+        if (fl.isFollowing && !Input.GetButton("Jump"))
         {
-            currentAngle = endAngle;
+            fl.readyToCast = true;
         }
+        if (fl.isFollowing == true && Input.GetButton("Jump") && fl.readyToCast == true)
+        {
+            currentAngle -= angularSpeed * Time.deltaTime;
+
+            if (currentAngle < endAngle)
+            {
+                currentAngle = startAngle;
+            }
+            else if (currentAngle > startAngle)
+            {
+                currentAngle = endAngle;
+            }
+
+            updateRotation();
+            return;
+        }
+        currentAngle = 0;
+        updateRotation();
     }
 }
 
