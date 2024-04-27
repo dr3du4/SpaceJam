@@ -378,8 +378,8 @@ MonoBehaviour:
   weaponVisual: {fileID: 8966487705787774768}
   state: 1
   kneeling: {fileID: 8715802425846172762}
-  bulletPrefab: {fileID: 4459011619380766966, guid: 6aaffeef0be630e4e95307e9b15c9d08, type: 3}
-  bulletSpeed: 10
+  bulletPrefab: {fileID: 4459011619380766966, guid: 4aaabb9b2fa696544b1096c5ef13debd, type: 3}
+  bulletSpeed: 25
   shootingTransform: {fileID: 341778103563096252}
 --- !u!50 &1311488856092134358
 Rigidbody2D:

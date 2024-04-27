@@ -30,6 +30,8 @@ public abstract class FishBase : MonoBehaviour
     public float chaseSpeed;
     public FishSpawnSettings SpawnSettings;
     public int fishLevel;
+    public int fishHealth = 1;
+    public GameObject damageEffect;
 
     [Header("Events")]
     public UnityEvent OnFishCatched;
@@ -74,6 +76,12 @@ public abstract class FishBase : MonoBehaviour
             other.GetComponentInChildren<Attractor>().ClearAttraction(this);
             Catch();
             OnFishCatched?.Invoke();
+        }
+
+        if (other.CompareTag("Player Bullet"))
+        {
+            Instantiate(damageEffect, transform.position, Quaternion.identity);
+            Destroy(other.gameObject);
         }
     }
 

@@ -10,6 +10,7 @@ TagManager:
   - hand
   - Real Player
   - Bullet
+  - Player Bullet
   layers:
   - Default
   - TransparentFX
