@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 public class PlayerWeapon : MonoBehaviour
@@ -17,7 +18,7 @@ public class PlayerWeapon : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float bulletSpeed = 10f;
     [SerializeField] private Transform shootingTransform;
-    
+    public GameObject fightImage;
     public bool CanShoot => state == State.Grabbed;
 
     private void Awake()
@@ -26,11 +27,20 @@ public class PlayerWeapon : MonoBehaviour
     }
 
     private void Update()
-    {
+    {   
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             state = state == State.Grabbed ? State.Released : State.Grabbed;
             ApplyState();
+            if (fightImage.activeSelf)
+            {
+                fightImage.SetActive(false);
+                
+            }
+            else
+            {
+                fightImage.SetActive(true);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && CanShoot)
