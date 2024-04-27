@@ -15,7 +15,8 @@ public struct AttractionParams
 public enum State
 {
     roaming,
-    chasing
+    chasing,
+    bite
 }
 
 [RequireComponent(typeof(BoxCollider2D), typeof(SpriteRenderer))]
@@ -56,6 +57,9 @@ public abstract class FishBase : MonoBehaviour
             case State.chasing:
                 transform.position = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime * chaseSpeed);
                 break;
+            case State.bite:
+                transform.position = target.position;
+                break;
         }
         
     }
@@ -72,6 +76,7 @@ public abstract class FishBase : MonoBehaviour
 
     public virtual void Catch()
     {
+        currentState = State.bite;
         Debug.Log("Catch invoked!");
     }
 
