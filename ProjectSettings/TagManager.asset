@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Fish
   - Bite
-  - RodEnd
+  - hand
   layers:
   - Default
   - TransparentFX
