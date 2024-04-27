@@ -144,11 +144,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
 <<<<<<< HEAD
+<<<<<<< HEAD
     nameFileIdTable:
       ukulele_0: 2732200362883988084
 =======
     nameFileIdTable: {}
 >>>>>>> bd0a597 (Wielki refactor bronii)
+=======
+    nameFileIdTable:
+      ukulele_0: 2732200362883988084
+>>>>>>> 5dfd6ef (Szybki tutorial zrobiony jeszcze szybciej)
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
